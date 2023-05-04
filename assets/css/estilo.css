@@ -114,7 +114,7 @@ p strong{
 }
 .servicios-home{
 		background-color: #32426a;
-		background-image: url(/assets/images/servicios-bg.png);
+		background-image: url(../images/servicios-bg.png);
 		background-blend-mode: screen;
 		background-repeat: no-repeat;
 		background-position: right;
@@ -127,7 +127,7 @@ p strong{
 		}
 }
 .servicios-bg{
-	background-image: url(/assets/images/rectangle-faded-servicios.png);
+	background-image: url(../images/rectangle-faded-servicios.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
