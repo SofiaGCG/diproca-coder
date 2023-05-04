@@ -1,0 +1,133 @@
+/*TITULOS*/
+h1 {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 82px;
+    display: flex;
+    margin: 0;
+    text-transform: uppercase;
+
+    @include under(mobile) {
+        font-size: 63px;
+        line-height: 70px;
+    }
+}
+h2 {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46px;
+    display: flex;
+    margin: 0;
+
+    @include under(mobile) {
+        font-size: 23px;
+        line-height: 29px;
+    }
+}
+
+/*BODY TEXT STYLES*/
+p {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 35px;
+    color: #32426a;
+    margin-bottom: 21px;
+    line-height: 30px;
+
+    @include under(mobile) {
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
+
+p strong{
+    font-weight: 700;
+}
+/*BOTONES*/
+.button {
+    max-width: 209px;
+    min-width: 200px;
+    padding: 14px 39px;
+    background: #EE8E00;
+    color: white;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+}
+/*HOME ESTILOS*/
+.hero-bg{
+	background-image: url(/assets/images/1obrerosDiproca.png);
+	padding: 0;
+}
+.title-home {
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+}
+.container70{
+	margin: auto 70px;
+}
+.hero-home {
+    padding: 120px 0;
+
+    .subtitle-home p {
+            font-family: "Inter", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 46px;
+            display: flex;
+            margin: 0;
+            color: white;
+        @include under(mobile) {
+        font-size: 23px;
+        line-height: 29px;
+        }
+    }
+}
+.hero-text {
+        background: linear-gradient(
+        90.66deg,
+        rgba(50, 66, 106, 0.84) 12.03%,
+        rgba(146, 105, 52, 0.62) 71.41%,
+        rgba(238, 142, 0, 0.59) 96.15%
+        );
+}
+.two-column-flex{
+	display: flex;
+}
+.logo-overlay{
+	position: absolute;
+}
+.servicios-home{
+		background-color: #32426a;
+		background-image: url(/assets/images/servicios-bg.png);
+		background-blend-mode: screen;
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: contain;
+		color: white;
+		position: relative;
+	
+		@media only screen and (min-width: 1688px){
+	    	background-size: 1333px;
+		}
+}
+.servicios-bg{
+	background-image: url(/assets/images/rectangle-faded-servicios.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
