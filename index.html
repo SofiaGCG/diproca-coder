@@ -16,11 +16,11 @@
 <body>
 
     <!--Nav-->
-<div class="container-fluid">
+<div>
         <div class="row">
         <div class="col-lg-12 col-xs-12">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img class="img-logo" src="assets/images/logo-main.svg" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -29,17 +29,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="pages/contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
+                    <a class="nav-link" href="pages/about.html">Sobre Nosotros</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="pages/proyectos.html">Nuestras Obras</a>
                     </li>
                 </ul>
                 </div>
@@ -62,11 +59,11 @@
 <!--About Section-->
 <section class="container">
     <div class="two-column-flex">
-        <div class="col-6">
+        <div class="col-lg-6 col-md">
             <img class="img-fluid logo-overlay" src="assets/images/logo-main.svg" alt="">
             <img class="img-fluid" src="assets/images/equipo.png" alt="">
         </div>
-        <div class="col-6">
+        <div class="col-lg-6 col-md">
             <p>
                 Somos una empresa dedicada a la construcción, creamos sinergia con nuestros clientes y colaboradores, buscando el bienestar y cumplimiento de los tiempos de entrega en cada obra.
             </p>
@@ -80,13 +77,13 @@
 <section class="container-fluid servicios-home">
     <div class="container-fluid servicios-bg">
         <div class="container">
-            <h3 class="col-7 orange-text">
+            <h3 class="col-lg-7 col-sm-12 orange-text">
                 Nuestros Servicios
             </h3>
-            <p class="col-7 white-text">
+            <p class="col-lg-7 col-sm-12 white-text">
                 Ya sea tomando el proyecto en su totalidad o trabajando en conjunto con grandes empresas. Hemos logrado cumplir retos que otras empresas no han podido apegándonos a los requerimientos de nuestros clientes, con profesionalismo y honestidad.
             </p>
-            <div class="service-list col-7">
+            <div class="service-list col-lg-7 col-sm-12">
                 <ul>
                     <li>CORE & SHELL</li> 
                     <li>CORPORATIVO</li> 
@@ -108,13 +105,13 @@
 <section class="container-fluid noticias">
     <div class="container">
         <div class="two-column-flex">
-            <div class="col-6">
+            <div class="col-lg-6 col-md">
                 <img class="img-fluid" src="assets/images/equipo.png" alt="">
             </div>
-            <div class="col-6">
-                <p>
+            <div class="col-lg-6 col-md">
+                <h3 class="news-display-text white-text">
                     Cumplimos 30 años en la industria sin perder de vista los estándares de calidad internacionales en cada proyecto.
-                </p>
+                </h3>
                 <p>
                     Agradecemos profundamente a todas las personas, empresas y organizaciones que han depositado su confianza en nosotros.
                 </p>
@@ -206,39 +203,34 @@
                 <h1 class="title-footer">Grupo diproca</h1>
                 <div class="social-container">
                     <a href="" target="_blank">
-                        <img class="social-icon" src="" alt="">
+                        <img class="social-icon" src="/assets/images/ig.svg" alt="">
                     </a>
                     <a href="" target="_blank">
-                        <img class="social-icon" src="" alt="">
+                        <img class="social-icon" src="/assets/images/fb.svg" alt="">
                     </a>
                     <a href="" target="_blank">
-                        <img class="social-icon" src="" alt="">
+                        <img class="social-icon" src="/assets/images/ytb.svg" alt="">
                     </a>
                 </div>            
             </div>
             <div class="column-footer two">
-                    <div class="email">
+                    <div class="email" style="display: flex; flex-direction: column;">
                         <h5>Contacto</h5>
-                        <a class="footer-link" href="mailto:<?php echo $email['email'];?>" target="_blank"><?php echo $email['email'];?></a>
-                        <a class="footer-link" href="tel:<?php echo $email['phone'];?>" target="_blank"><?php echo $email['phone'];?></a>
+                        <a style="text-decoration: none; color: white;" class="footer-link" href="mailto:contact@diproca.com" target="_blank">contact@diproca.com</a>
+                        <a  style="text-decoration: none; color: white;" class="footer-link" href="tel:5555555555>" target="_blank">555555555</a>
                     </div>
-                <?php endif?>
-                <?php if( !empty( $address ) ) :?>
                     <div class="address">
                         <h5>Ubicación</h5>
-                        <a class="footer-link" href="<?php echo $address['link'];?>" target="_blank"><?php echo $address['text'];?></a>
+                        <a style="text-decoration: none; color: white;"class="footer-link" href="https://goo.gl/maps/oNR5BHqJyRdj7zpC9" target="_blank">Boulevard Bernado Quintana 100 Ciudad de México</a>
                     </div>
-                <?php endif?>
-                <?php if( !empty( $horario ) ) :?>
                     <div class="horario">
                         <h5>
                         Horarios  
                         </h5>
                         <div class="footer-link">
-                            <?php echo $horario;?>
+                        Lunes a Viernes de 7 a 19 hrs
                         </div>
                     </div>
-                <?php endif?>
             </div>
         </div>
     </div>

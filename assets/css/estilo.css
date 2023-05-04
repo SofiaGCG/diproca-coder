@@ -1,3 +1,5 @@
+
+
 body{
     overflow-x: hidden;
 }
@@ -13,7 +15,7 @@ h1 {
     margin: 0;
     text-transform: uppercase;
 
-    @include under(mobile) {
+    @media (max-width: 712px) {
         font-size: 63px;
         line-height: 70px;
     }
@@ -21,13 +23,14 @@ h1 {
 h2 {
     font-family: "Inter", sans-serif;
     font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
+    font-weight: 700;
+    font-size: 37px;
     line-height: 46px;
     display: flex;
     margin: 0;
+    color: #EE8E00;
 
-    @include under(mobile) {
+    @media (max-width: 712px) {
         font-size: 23px;
         line-height: 29px;
     }
@@ -67,10 +70,10 @@ p {
     margin-bottom: 21px;
     line-height: 30px;
 
-    @include under(mobile) {
+    @media (max-width: 712px){
         font-size: 16px;
         line-height: 21px;
-    }
+    }  
 }
 .orange-text{
     color: #EE8E00;
@@ -79,6 +82,8 @@ p {
 p strong{
     font-weight: 700;
 }
+
+
 /*BOTONES*/
 .button {
     max-width: 209px;
@@ -98,11 +103,17 @@ p strong{
     text-transform: uppercase;
     justify-content: center;
 }
+
+.button:hover{
+    color: white;
+    background: #32426A;    
+}
+
+
 /*MENÚ ESTILOS*/
 nav{
     position: fixed !important;
     width: 100%;
-    margin: 0 -12px;
     background: linear-gradient(90.66deg, #32426A 7.08%, rgba(238, 142, 0, 0.83) 76.36%);
     padding: 7px 30px !important;
     z-index: 999;
@@ -120,9 +131,27 @@ nav{
 .bg-light {
 --bs-bg-opacity: 0;
 }
+.navbar-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-expand-lg .navbar-collapse{
+
+    @media (min-width: 992px){
+        justify-content: flex-end;
+    }   
+}
+
 
 /*FOOTER*/ 
-
+.social-container a{
+    text-decoration: none;
+}
+.social-icon {
+    padding: 10px;
+}
 #footer{
     background-color: #32426a;
     padding-bottom: 70px;
@@ -138,17 +167,7 @@ nav{
     background-size: cover;
     background-position: center;
     position: relative;
-  
-    @include under(xt) {
-      height: 1000px;
-    }
-    @include under(md) {
-      height: 679px;
-    }
-    @include under(mobile) {
-      height: 333px;
-    }
-  }
+}
 .degradado-footer {
     position: absolute;
     width: 100vw;
@@ -165,6 +184,12 @@ nav{
 color: white;
 text-align: center;
 line-height: 40px;
+
+@media (max-width: 992px){
+    line-height:35px;
+    font-size:25px;
+} 
+
 }
 .container-text-button-proyectos-footer{
 margin: auto;
@@ -173,6 +198,11 @@ display: flex;
 flex-direction: column;
 align-items: center;
 z-index: 800;
+
+@media (max-width: 992px){
+    max-width:100%;
+} 
+
 }
 .column-footer {
     padding: 20px 121px 0px 0;
@@ -183,7 +213,39 @@ z-index: 800;
     padding-bottom: 10px;
 }
 
+
+.email, .address, .horario{
+    padding-top: 30px;
+}
+
+        /*break xt*/
+        @media only screen and (max-width: 1201px){
+            .footer-projects{    
+                height: 1000px;}
+            }
+
+        /*break md*/
+        @media only screen and (max-width: 1024px){
+            .footer-projects{    
+                height: 679px;}
+            }
+
+        /*break mobile*/
+        @media only screen and (max-width: 712px){
+            .footer-projects{    
+                height: 333px;}
+            }
+
+
 /*HOME ESTILOS*/
+
+.col-lg-6{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .hero-bg{
 	background-image: url(../images/1obrerosDiproca.png);
 	padding: 0;
@@ -194,25 +256,25 @@ z-index: 800;
 }
 .container70{
 	margin: auto 70px;
-}
-.hero-home {
-    padding: 120px 0;
 
-    .subtitle-home p {
-            font-family: "Inter", sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 40px;
-            line-height: 46px;
-            display: flex;
-            margin: 0;
-            color: white;
-        @include under(mobile) {
-        font-size: 23px;
-        line-height: 29px;
-        }
+    @media (max-width: 712px){
+        margin: auto 20px;
     }
 }
+.hero-home {
+    padding: 120px 0;}
+
+.subtitle-home p {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46px;
+    display: flex;
+    margin: 0;
+    color: white;
+}
+
 .hero-text {
         background: linear-gradient(
         90.66deg,
@@ -225,9 +287,15 @@ z-index: 800;
 	display: flex;
     padding: 30px 0;
     gap: 30px;
+
+    @media (max-width: 712px){
+        flex-direction:column;
+    }
 }
 .logo-overlay{
 	position: absolute;
+    min-height: 70%;
+
 }
 .servicios-home{
 		background-color: #32426a;
@@ -238,10 +306,10 @@ z-index: 800;
 		background-size: contain;
 		color: white;
 		position: relative;
-	
-		@media only screen and (min-width: 1688px){
-	    	background-size: 1333px;
-		}
+
+        @media only screen and (max-width: 712px){
+            background-image:none;
+        }
 }
 .servicios-bg{
 	background-image: url(../images/rectangle-faded-servicios.png);
@@ -250,11 +318,12 @@ z-index: 800;
     background-position-x: -133px;
 }
 
-.col-6 {
+.col-md-6 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding: 12px;
 }
 
 .white-text{
@@ -277,6 +346,11 @@ z-index: 800;
     font-size: 21px;
     line-height: 45px;
     list-style-image: url("../images/ellipse-list.svg");
+
+    @media only screen and (max-width: 712px){
+        max-height: none;
+        font-size:16px;
+    }
 }
 
 .service-list li {
@@ -294,6 +368,11 @@ z-index: 800;
     flex-direction: column;
     align-items: center;
     margin: 70px 0;
+
+
+    @media only screen and (max-width: 712px){
+        margin: 70px 0 10px;
+    }
 }
 
 .grid-container {
@@ -303,6 +382,10 @@ z-index: 800;
     column-gap: 30px; 
     row-gap: 50px; 
     margin: 0 0 74px;
+
+    @media only screen and (max-width: 712px){
+        grid-template-columns:1fr 1fr;
+    }
 }
 
 .hover-project {
@@ -314,21 +397,20 @@ z-index: 800;
     align-items: flex-end;
     padding: 0 20px;
     opacity: 0%;
-  }
-  
-  .hover-project:hover {
+}
+
+.hover-project:hover {
     opacity: 100%;
-  }
-  
-  .hover-project p {
+}
+
+.hover-project p {
     color: white;
-    font-weight: 500;
-  
-    &strong{
-      font-weight: 700;
+    font-weight: 500;}
+
+.hover-project p strong{
+    font-weight: 700;
     }
 
-}
 
 .project-container-img {
     width: 100%;
@@ -341,10 +423,49 @@ z-index: 800;
 .img-proyects{
     width: 100%;
 }
+        /*break personalizado*/
+        @media only screen and (min-width: 1688px){
+            .servicios-home{    
+                background-size: 1333px;}
+        }
+
+        /*break mobile*/
+        @media only screen and (max-width: 712px){
+            .subtitle-home p{    
+                font-size: 23px;
+                line-height: 29px;}
+        }
 
 
-.navbar-expand-lg .navbar-collapse{
-    @media (min-width: 992px){
-        justify-content: flex-end;
-    }   
+/*ESTILOS PROYECTOS*/
+#proyectos{
+    padding: 105px 0px 50px;
+    display: block;
+    flex-direction: row;
+    background-size: cover;
+    overflow: hidden;
 }
+
+#proyectos .page-title{
+    padding: 0 70px;
+}
+
+.page-title p{
+    font-weight: 700;
+    }
+
+        /*break personalizado*/
+        @media only screen and (max-width: 876px){
+            #proyectos .page-title{    
+            width: 100%;}
+            }
+        
+        /*break sm*/
+        @media only screen and (max-width: 768px){
+            #proyectos{
+                padding: 72px 0px;
+                flex-direction: column;
+            }
+            #proyectos .page-title{
+                padding: 0 20px;}
+        }
